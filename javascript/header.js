@@ -7,7 +7,7 @@ class RamenHeader extends HTMLElement {
             </div>
 
             <div class="header_right">
-                <div class="title">ラーメン紹介</div>
+                <div class="title">人生らーめん</div>
 
                 <nav class="nav">
                     <ul>
@@ -29,5 +29,4 @@ class RamenHeader extends HTMLElement {
     }
 }
 
-// <ramen-header> というオリジナルタグを登録（名前には必ずハイフン「-」を含めるルールがあります）
 customElements.define('ramen-header', RamenHeader);

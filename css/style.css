@@ -15,8 +15,8 @@ body {
 .header {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
-    padding: 10px 20px;
+    align-items: center;
+    padding: 5px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -29,16 +29,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* 上にタイトル、下にナビを配置 */
-    min-height: 80px;
-    /* 画像の高さ(80px)と統一 */
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #333;
     text-align: center;
+    line-height: 1.2;
 }
 
 /* --- ナビゲーション基本配置（Flexboxへ変更） --- */
@@ -59,7 +57,7 @@ nav>ul>li {
 
 nav a {
     display: block;
-    padding: 10px 15px;
+    padding: 4px 12px;
     text-decoration: none;
     color: #555;
     text-align: center;
@@ -114,7 +112,7 @@ nav>ul>li:hover .dropdown {
 }
 
 .ramenIcon img {
-    height: 80px;
+    height: 50px;
     width: auto;
     display: block;
 }
@@ -174,19 +172,19 @@ nav>ul>li:hover .dropdown {
 }
 
 .hero_image:nth-of-type(2) {
-    animation-delay: 5s;
+    animation-delay: 4s;
 }
 
 .hero_image:nth-of-type(3) {
-    animation-delay: 10s;
+    animation-delay: 8s;
 }
 
 .hero_image:nth-of-type(4) {
-    animation-delay: 15s;
+    animation-delay: 12s;
 }
 
 .hero_image:nth-of-type(5) {
-    animation-delay: 20s;
+    animation-delay: 16s;
 }
 
 .hero_image {
@@ -205,4 +203,66 @@ nav>ul>li:hover .dropdown {
 .dummy_scroll {
     width: 100%;
     height: 5000px;
+}
+
+/* 紹介店舗一覧 */
+/* --- 紹介店舗一覧エリア --- */
+.store_container {
+    background-color: #ffffff;
+    border: 2px solid #3D2314;
+    border-radius: 12px;
+    padding: 30px 24px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.store_title {
+    font-size: 1.5rem;
+    color: #3D2314;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3D2314;
+}
+
+.store_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.store_grid li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #FDFBF7;
+    border: 1px solid #E0DCD3;
+    border-radius: 8px;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* ホバー時の効果 */
+.store_grid li a:hover {
+    background-color: #3D2314;
+    color: #ffffff;
+    border-color: #3D2314;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* スマホ表示時のレスポンシブ対応 */
+@media (max-width: 768px) {
+    .store_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
