@@ -12,7 +12,7 @@ html {
     /* 正円にするためのサイズ指定 */
     width: 60px;
     height: 60px;
-    border-radius: 50%; /* 50%で完全な正円になります */
+    border-radius: 50%; 
 
     /* 文字を上下左右の中央に配置 */
     display: flex;
@@ -22,24 +22,21 @@ html {
 
     background: #ab101b;
     color: #fff;
-    font-size: 11px; /* 60pxの円に合わせて少し微調整 */
+    font-size: 11px; 
     line-height: 1.2;
     text-align: center;
     text-decoration: none;
 
-    /* ふわっと出すためのアニメーション設定 */
     opacity: 0;
     pointer-events: none;
     transition: opacity .3s ease;
 }
 
-/* スクロールして表示された時 */
 #pagetop.visible {
     opacity: 0.9;
     pointer-events: auto;
 }
 
-/* 表示時のホバー効果 */
 #pagetop.visible:hover {
     opacity: 0.5;
 }
