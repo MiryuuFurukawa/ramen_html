@@ -75,9 +75,7 @@ nav>ul>li:hover>a {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    /* 「店舗情報」の下に中央寄せ配置 */
     width: 520px;
-    /* 4列が収まる十分な幅 */
     background-color: #FDFBF7;
     border: 2px solid #3D2314;
     border-radius: 10px;
