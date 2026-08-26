@@ -41,38 +41,76 @@ body {
     text-align: center;
 }
 
-nav {
-    flex-grow: 1;
-}
-
+/* --- ナビゲーション基本配置（Flexboxへ変更） --- */
 nav ul {
-    display: table;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin: 0;
     padding: 0;
-    width: 100%;
-    text-align: center;
+    list-style: none;
 }
 
-nav li {
-    display: table-cell;
-    min-width: 50px;
+/* 親メニュー項目 */
+nav>ul>li {
+    position: relative;
+    /* ドロップダウン配置の基準位置 */
+    min-width: 100px;
 }
 
 nav a {
     display: block;
-    width: 100%;
+    padding: 10px 15px;
     text-decoration: none;
     color: #555;
-    padding-bottom: 5px;
+    text-align: center;
 }
 
-nav li.current {
-    border-bottom: 3px solid #92D050;
-}
-
-nav li:hover {
+/* ホバー・選択中時の線指定 */
+nav>ul>li.current>a,
+nav>ul>li:hover>a {
     color: #3D2314;
     border-bottom: 3px solid #3D2314;
+}
+
+/* --- ドロップダウンメニュー（非表示・位置設定） --- */
+.dropdown {
+    display: none;
+    /* 初期状態は隠す */
+    position: absolute;
+    top: 100%;
+    /* 親要素の直下に配置 */
+    left: 0;
+    min-width: 140px;
+    background-color: #FDFBF7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1001;
+}
+
+.dropdown li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown a {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    border-bottom: none;
+    /* 親のホバー用線を無効化 */
+}
+
+/* ドロップダウン内のホバー処理 */
+.dropdown a:hover {
+    background-color: #f3efe6;
+    color: #3D2314;
+}
+
+/* 親liにホバーした際にドロップダウンを表示 */
+nav>ul>li:hover .dropdown {
+    display: block;
 }
 
 .ramenIcon img {
