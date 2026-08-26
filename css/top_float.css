@@ -2,19 +2,16 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ボタン本体（完全な円形に修正） */
 #pagetop {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 5500;
 
-    /* 正円にするためのサイズ指定 */
     width: 60px;
     height: 60px;
     border-radius: 50%;
 
-    /* 文字を上下左右の中央に配置 */
     display: flex;
     flex-direction: column;
     justify-content: center;

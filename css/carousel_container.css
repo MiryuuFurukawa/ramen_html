@@ -37,7 +37,6 @@
         transition: background-color 0.2s, color 0.2s;
     }
 
-    /* ホバー時スタイル */
     @media (any-hover: hover) {
         &::scroll-button(*):not(:disabled):hover {
             background-color: #B94047;

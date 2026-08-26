@@ -12,11 +12,9 @@ table tr:nth-child(odd) {
     display: flex;
     align-items: stretch;
     height: 450px;
-    /* ★全体の高さを固定（数値はお好みで調整可能です） */
     max-width: 1200px;
 }
 
-/* 1. 左右のブロックを画面半々（50%ずつ）にする */
 .information_container_left,
 .information_container iframe {
     flex: 1;
@@ -38,7 +36,6 @@ table tr:nth-child(odd) {
     object-fit: cover;
 }
 
-/* マップ（iframe）も同様に比率を固定 */
 .information_container iframe {
     flex: 1;
     width: 50%;

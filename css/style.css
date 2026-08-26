@@ -11,7 +11,7 @@ body {
     ;
 }
 
-/* index.html */
+
 .header {
     display: flex;
     justify-content: flex-start;
@@ -23,7 +23,6 @@ body {
     background-color: #FDFBF7;
 }
 
-/* 右側エリア（タイトル + ナビゲーション） */
 .header_right {
     flex-grow: 1;
     display: flex;
@@ -39,7 +38,6 @@ body {
     line-height: 1.2;
 }
 
-/* --- ナビゲーション基本配置（Flexboxへ変更） --- */
 nav ul {
     display: flex;
     justify-content: center;
@@ -48,10 +46,8 @@ nav ul {
     list-style: none;
 }
 
-/* 親メニュー項目 */
 nav>ul>li {
     position: relative;
-    /* ドロップダウン配置の基準位置 */
     min-width: 100px;
 }
 
@@ -117,14 +113,12 @@ nav>ul>li:hover .dropdown {
     transition: all 0.2s ease;
 }
 
-/* ドロップダウン内のホバー処理 */
 .dropdown a:hover {
     background-color: #3D2314;
     color: #ffffff;
     border-color: #3D2314;
 }
 
-/* 親liにホバーした際にドロップダウンを表示 */
 nav>ul>li:hover .dropdown {
     display: grid;
 }
@@ -138,7 +132,6 @@ nav>ul>li:hover .dropdown {
 .hero_container {
     width: 100%;
     aspect-ratio: 16 / 9;
-    /* 縦横比を固定して画像の表示領域を安定させる */
     position: relative;
     overflow: hidden;
 }
@@ -223,8 +216,6 @@ nav>ul>li:hover .dropdown {
     height: 5000px;
 }
 
-/* 紹介店舗一覧 */
-/* --- 紹介店舗一覧エリア --- */
 .store_container {
     background-color: #ffffff;
     border: 2px solid #3D2314;
@@ -269,7 +260,7 @@ nav>ul>li:hover .dropdown {
     padding: 0 10px;
 }
 
-/* ホバー時の効果 */
+
 .store_grid li a:hover {
     background-color: #3D2314;
     color: #ffffff;
@@ -278,7 +269,7 @@ nav>ul>li:hover .dropdown {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* スマホ表示時のレスポンシブ対応 */
+
 @media (max-width: 768px) {
     .store_grid {
         grid-template-columns: repeat(2, 1fr);
