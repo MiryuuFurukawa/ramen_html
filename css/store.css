@@ -10,23 +10,27 @@ table tr:nth-child(odd) {
 
 .information_container {
     display: flex;
-    align-items: stretch;
-    height: 450px;
+    gap: 20px;
+
+    width: 100%;
     max-width: 1200px;
+    height: 400px;
+    margin: 30px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-.information_container_left,
-.information_container iframe {
+.information_container_left {
     flex: 1;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
     height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(61, 35, 20, 0.08);
+    border: 1px solid #E0DCD3;
 }
 
 .information_img {
     width: 100%;
-    flex: 1;
     height: 100%;
 }
 
@@ -34,12 +38,33 @@ table tr:nth-child(odd) {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
+/* 右側：Googleマップ */
 .information_container iframe {
     flex: 1;
-    width: 50%;
+    width: 100%;
     height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(61, 35, 20, 0.08);
+    border: 1px solid #E0DCD3 !important;
+}
+
+/* スマホ・タブレット表示（768px以下で縦並びにする設定） */
+@media (max-width: 768px) {
+    .information_container {
+        flex-direction: column;
+        height: auto;
+        /* 高さの固定を解除 */
+    }
+
+    .information_container_left,
+    .information_container iframe {
+        width: 100%;
+        height: 250px;
+        /* スマホ時のそれぞれの高さ */
+    }
 }
 
 .store_table {
