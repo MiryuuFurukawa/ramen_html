@@ -1,5 +1,5 @@
 /* タイトル装飾 */
-.tsukemen_title {
+.menrank_title {
     font-size: 1.8rem;
     color: #3D2314;
     text-align: center;
@@ -10,7 +10,7 @@
 }
 
 /* ランキング全体のコンテナ */
-.tsukemen_list {
+.menrank_list {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
@@ -20,7 +20,7 @@
 }
 
 /* 各店舗カード（2カラムレイアウト） */
-.tsukemen_card {
+.menrank_card {
     display: flex;
     align-items: stretch;
     background-color: #ffffff;
@@ -32,7 +32,7 @@
 }
 
 /* 左側：ラーメン画像（幅50%へ変更） */
-.tsukemen_img {
+.menrank_img {
     flex: 1;
     width: 50%;
     height: 340px;
@@ -41,14 +41,14 @@
     overflow: hidden;
 }
 
-.tsukemen_img img {
+.menrank_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 /* 右側：店舗情報全体（幅50%へ変更） */
-.tsukemen_info {
+.menrank_info {
     flex: 1;
     width: 50%;
     display: flex;
@@ -57,7 +57,7 @@
 }
 
 /* 右上：順位アイコン ＋ 店名 */
-.tsukemen_header {
+.menrank_header {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -79,7 +79,7 @@
 }
 
 /* 右下：説明文 */
-.tsukemen_desc {
+.menrank_desc {
     color: #444444;
     font-size: 0.95rem;
     line-height: 1.7;
@@ -92,19 +92,25 @@
     /* ワンポイントの左線 */
 }
 
+.menrank_img img[src*="mikoto.jpg"],
+.menrank_img img[src*="baribari.jpg"] {
+    object-position: center 35%;
+    /* 数値を変更すると上下の位置が動きます */
+}
+
 @media (max-width: 768px) {
-    .tsukemen_card {
+    .menrank_card {
         flex-direction: column;
         align-items: stretch;
     }
 
-    .tsukemen_img,
-    .tsukemen_info {
+    .menrank_img,
+    .menrank_info {
         width: 100%;
         /* スマホでは全幅に戻す */
     }
 
-    .tsukemen_img {
+    .menrank_img {
         flex: none;
         height: 200px;
     }

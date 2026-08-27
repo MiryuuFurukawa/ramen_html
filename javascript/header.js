@@ -34,7 +34,6 @@ class RamenHeader extends HTMLElement {
                             </ul>
                         </li>
                         <li><a href="rank.html">ランキング</a></li>
-                        <li><a href="map.html">ラーメンマップ</a></li>
                     </ul>
                 </nav>
             </div>
