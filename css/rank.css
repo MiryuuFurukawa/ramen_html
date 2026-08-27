@@ -1,0 +1,111 @@
+/* タイトル装飾 */
+.tsukemen_title {
+    font-size: 1.8rem;
+    color: #3D2314;
+    text-align: center;
+    margin: 40px auto 24px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #3D2314;
+    max-width: 1200px;
+}
+
+/* ランキング全体のコンテナ */
+.tsukemen_list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* 各店舗カード（2カラムレイアウト） */
+.tsukemen_card {
+    display: flex;
+    align-items: stretch;
+    background-color: #ffffff;
+    border: 1px solid #E0DCD3;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(61, 35, 20, 0.05);
+    gap: 24px;
+}
+
+/* 左側：ラーメン画像（幅50%へ変更） */
+.tsukemen_img {
+    flex: 1;
+    width: 50%;
+    height: 340px;
+    /* 横幅拡張に合わせて高さを200px→260pxへ調整 */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tsukemen_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 右側：店舗情報全体（幅50%へ変更） */
+.tsukemen_info {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 右上：順位アイコン ＋ 店名 */
+.tsukemen_header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.rank_icon {
+    height: 48px;
+    /* 順位画像のサイズ調整 */
+    width: auto;
+    object-fit: contain;
+}
+
+.store_name {
+    font-size: 1.5rem;
+    color: #3D2314;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* 右下：説明文 */
+.tsukemen_desc {
+    color: #444444;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+    background-color: #FDFBF7;
+    /* 内側にうっすら背景色 */
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 4px solid #3D2314;
+    /* ワンポイントの左線 */
+}
+
+@media (max-width: 768px) {
+    .tsukemen_card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tsukemen_img,
+    .tsukemen_info {
+        width: 100%;
+        /* スマホでは全幅に戻す */
+    }
+
+    .tsukemen_img {
+        flex: none;
+        height: 200px;
+    }
+}
