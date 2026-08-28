@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalCaption = document.getElementById('modal-caption');
     const closeBtn = document.querySelector('.modal-close');
 
-    // カードクリックでモーダル表示
     cards.forEach(card => {
         card.addEventListener('click', () => {
             const img = card.querySelector('img');
@@ -21,13 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 閉じる関数
     const closeModal = () => {
         modal.classList.remove('active');
         modal.setAttribute('aria-hidden', 'true');
     };
 
-    // イベント設定（閉じるボタン・背景クリック・Escキー）
     closeBtn.addEventListener('click', closeModal);
 
     modal.addEventListener('click', (e) => {

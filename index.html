@@ -8,13 +8,20 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carousel_container.css">
     <link rel="stylesheet" href="css/top_float.css">
+    <link rel="stylesheet" href="css/loading.css">
     <script src="javascript/top_float.js"></script>
     <link rel="shortcut　icon" href="images/ramenIcon.png">
     <script src="javascript/header.js" defer></script>
+    <script src="javascript/loading.js" defer></script>
 </head>
 
-
 <body class="top">
+    <div id="loading">
+        <div class="loading-wrapper">
+            <img src="images/ramenIcon.png" alt="Loading..." class="loading-logo">
+        </div>
+    </div>
+
     <a id="pagetop" aria-label="ページのトップへ">TOP</a>
 
     <ramen-header></ramen-header>
@@ -57,7 +64,11 @@
             <div class="carousel_container">
                 <ul class="carousel">
                     <li class="item"><img src="images/carousel/butayama.jpg" alt="images" /></li>
-                    <li class="item"><img src="images/carousel/hanabi.jpg" alt="images" /></li>
+                    <li class="item">
+                        <a href="store_hanabi.html">
+                            <img src="images/carousel/hanabi.jpg" alt="images" />
+                        </a>
+                    </li>
                     <li class="item"><img src="images/carousel/ichibnaken.jpg" alt="images" /></li>
                     <li class="item"><img src="images/carousel/kajiken.jpg" alt="images" /></li>
                     <li class="item"><img src="images/carousel/kirimen.jpg" alt="images" /></li>
