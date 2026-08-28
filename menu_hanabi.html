@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/top_float.css">
+    <link rel="stylesheet" href="css/modal.css">
     <script src="javascript/top_float.js"></script>
     <script src="javascript/header.js" defer></script>
 </head>
@@ -57,6 +58,15 @@
                 </div>
             </div>
 
+            <div class="menu-card">
+                <img src="images/carousel/hanabi_negisio.jpg" alt="メニュー写真">
+                <div class="menu-card-content">
+                    <div class="menu-title">ねぎしおまぜそば</div>
+                    <p class="menu-desc">おいしい</p>
+                    <div class="menu-price">¥1,100-</div>
+                </div>
+            </div>
+
 
 
 
@@ -78,6 +88,14 @@
 
         </div>
     </div>
+
+    <div id="image-modal" class="modal" aria-hidden="true">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img" src="" alt="">
+        <div id="modal-caption"></div>
+    </div>
+
+    <script src="javascript/modal.js"></script>
 
 </body>
 

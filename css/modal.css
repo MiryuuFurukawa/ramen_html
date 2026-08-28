@@ -1,0 +1,58 @@
+/* カードを押しやすくする */
+.menu-card {
+    cursor: pointer;
+}
+
+/* モーダル背景 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* モーダル内画像 */
+.modal-content {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 画像下部のタイトル表示 */
+#modal-caption {
+    color: #fff;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* 閉じるボタン */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #ccc;
+}
